@@ -1,0 +1,18 @@
+name: example_users
+description: "Sync users to a REST endpoint (dry-run safe)"
+model: ref('users')
+
+destination:
+  type: rest_api
+  url: "https://httpbin.org/post"
+  method: POST
+  body_template: |
+    {
+      "name": "{{ row.name }}",
+      "email": "{{ row.email }}",
+      "department": "{{ row.department }}"
+    }
+
+sync:
+  mode: full
+  on_error: skip
