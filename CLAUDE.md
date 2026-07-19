@@ -24,4 +24,5 @@ pip install drt-core
 drt validate    # validate config
 drt list        # list syncs
 drt run --dry-run  # test without sending data
+drt docs generate  # v0.8.0: lineage catalog site -> target/docs/
 ```

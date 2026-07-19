@@ -10,6 +10,7 @@ echo "  Removed drt state"
 
 # Remove DuckDB database (can be recreated by setup.sh)
 rm -f sandbox.duckdb sandbox.duckdb.wal
+rm -rf target/          # generated docs site (drt docs generate)
 echo "  Removed sandbox.duckdb"
 
 # Remove generated syncs (keep example)
